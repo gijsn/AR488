@@ -209,7 +209,7 @@ const char * const macros[] PROGMEM = {
  * Note: Ardiono serial input buffer is 64 
  */
 // Serial input parsing buffer
-static const uint8_t PBSIZE = 128;
+static const uint16_t PBSIZE = 128;
 char pBuf[PBSIZE];
 uint8_t pbPtr = 0;
 
@@ -629,7 +629,6 @@ if (lnRdy>0){
 
   // If charaters waiting in the serial input buffer then call handler
   if (dataPort.available()) lnRdy = serialIn_h();
-
   delayMicroseconds(5);
 }
 /***** END MAIN LOOP *****/
@@ -1458,8 +1457,6 @@ void trg_h(char *params) {
   uint8_t addrs[15] = {0};
   uint16_t val = 0;
   uint8_t cnt = 0;
-
-  addrs[0] = addrs[0]; // Meaningless as both are zero but defaults compiler warning!
 
   // Read parameters
   if (params == NULL) {

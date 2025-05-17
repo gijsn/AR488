@@ -103,7 +103,7 @@
   #define AR_SERIAL_PORT Serial
   // #define AR_SERIAL_SWPORT
   // Set port operating speed
-  #define AR_SERIAL_SPEED 115200
+  #define AR_SERIAL_SPEED 2400
   // Enable Bluetooth (HC05) module?
   //#define AR_SERIAL_BT_ENABLE 12        // HC05 enable pin
   //#define AR_SERIAL_BT_NAME "AR488-BT"  // Bluetooth device name
